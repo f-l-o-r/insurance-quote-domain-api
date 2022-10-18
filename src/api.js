@@ -1,7 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import InsuranceRouter from './routes/insuranceRouter.js'
+import InsuranceRouter from './routes/InsuranceRouter.js';
+const serverless = require("serverless-http");
 
 const app = express();
 
@@ -9,9 +10,10 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
 
-app.use('/insurance', InsuranceRouter);
+app.use(`/.netlify/functions/api/insurance`, InsuranceRouter);
 
-const CONNECTION_URL= process.env.URL_DATABASE;
+const CONNECTION_URL=process.env.URL_DATABASE;
+;
 
 
 const PORT = process.env.PORT || 8080;
