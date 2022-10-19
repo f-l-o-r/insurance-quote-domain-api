@@ -1,3 +1,5 @@
 node_modules
-.env.development
+src/.env.development
 functions
+# Local Netlify folder
+.netlify
