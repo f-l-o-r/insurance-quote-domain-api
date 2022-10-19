@@ -60,7 +60,6 @@ export const InsuranceOptionsData = [
 
             }
         ]
-
     },
     {
         "tittle": "Basic",
