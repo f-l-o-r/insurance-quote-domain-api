@@ -9,7 +9,7 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
 
-app.use(`/.netlify/functions/api/insurance`, InsuranceRouter);
+app.use(`/insurance`, InsuranceRouter);
 
 const CONNECTION_URL='mongodb+srv://insurance-quote:insurance.pass260@fortiz.qsypbsn.mongodb.net/?retryWrites=true&w=majority';
 
