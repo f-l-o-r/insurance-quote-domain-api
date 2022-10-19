@@ -2,12 +2,11 @@
   "name": "insurance-quote-domain-api",
   "version": "1.0.0",
   "main": "./src/api.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon src/api.js",
+    "start": "nodemon src/api.js",
     "debug": "nodemon --inspect src/api.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
