@@ -5,6 +5,14 @@ import InsuranceOptions from "../models/insuranceOptions.js";
 
 const router = express.Router();
 
+export const test = async (req, res) => {
+    try{
+        res.status(200).json("it's working");
+    } catch(error) {
+        res.status(404).json({message: error.message});
+    }
+}
+
 export const getInsurance = async (req, res) => {
     try{
         const insuranceQuote = await InsuranceQuote.find();

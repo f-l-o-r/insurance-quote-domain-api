@@ -6,14 +6,15 @@ import {
     getInsuranceProducts,
     addInsuranceProducts,
     addInsuranceOptions,
-    getInsuranceOptions
+    getInsuranceOptions, test
 } from "../controllers/insurance.js";
 const InsuranceRouter = express.Router();
-InsuranceRouter.get('/', getInsurance);
+InsuranceRouter.get('/', test);
 InsuranceRouter.post('/products', addInsuranceProducts);
 InsuranceRouter.get('/products', getInsuranceProducts);
 InsuranceRouter.post('/options', addInsuranceOptions);
 InsuranceRouter.get('/options', getInsuranceOptions);
 InsuranceRouter.post('/quote', createInsurance);
+InsuranceRouter.get('/quote', getInsurance);
 InsuranceRouter.get('/price/:optionType', getPriceByInsuranceType);
 export default InsuranceRouter;
