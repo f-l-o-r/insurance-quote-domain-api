@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use(`/insurance`, InsuranceRouter);
 
-const CONNECTION_URL='mongodb+srv://insurance-quote:insurance.pass260@fortiz.qsypbsn.mongodb.net/?retryWrites=true&w=majority';
+const CONNECTION_URL='http://localhost:27017';
 
 const PORT = process.env.PORT || 8080;
 
